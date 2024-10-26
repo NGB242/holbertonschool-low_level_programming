@@ -2,9 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- *
  * main - Affiche les resultats
- *
  * Return 0 (success)
  */
 int main(void)
