@@ -4,7 +4,6 @@
 /**
 * main - Affiche les resultats de la variable n positif, zero et negatif
 * Decription: assign a random number to the variable n each time it is executed
-*
 * Return: always 0 (success)
 */
 int main(void)
