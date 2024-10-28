@@ -13,6 +13,8 @@ for (low = 'a'; low <= 'z'; low++)
 putchar(low);
 }
 for (low = 'A'; low <= 'z'; low++)
+{putchar(low);
+}
 {
 putchar('\n');
 }
