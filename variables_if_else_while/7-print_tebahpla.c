@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 #include <time.h>
 
 /**
@@ -14,4 +14,5 @@ for (low = 'z'; low >= 'a'; low--)
 {	putchar(low);
 	putchar('\n');
 }
-	return (0)
+	return (0);
+}
