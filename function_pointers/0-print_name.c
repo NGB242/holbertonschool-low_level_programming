@@ -9,5 +9,9 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	char name;
+	printf("name");
+	scanf("%s", &name);
+	printf("name:%s\n", name);
+	return (0);
 }
