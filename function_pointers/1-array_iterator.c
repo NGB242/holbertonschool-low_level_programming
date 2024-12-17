@@ -6,7 +6,7 @@
  * @size: la taille du tableau 5
  * @action: un pointeur de fonction à appliquer sur chaque élément
  *
- * Return: R
+ * Return: rien
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
