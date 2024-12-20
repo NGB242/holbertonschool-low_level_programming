@@ -1,12 +1,19 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - program that prints _putchar, followed by a new line.
- * 
+ * declaration: this program prints "_putchar" followed by a new line.
  * return: 0
  */
 
-int main(void) 
+int main(void)
 {
-printf("_putchar\n");
-return 0;
+const char *str  = "_putchar";
+while (*str)
+{
+_putchar(*str);
+str++;
+}
+_putchar('\n');
+return (0);
 }
