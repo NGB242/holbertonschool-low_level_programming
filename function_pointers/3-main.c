@@ -3,7 +3,7 @@
 #include "3-calc.h"
 
 /**
- * main - performs simple operations
+ * main -  ENTRY the code that performs simple operations
  * @argc: number of arguments
  * @argv: array of arguments
  *
