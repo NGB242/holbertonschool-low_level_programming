@@ -2,7 +2,7 @@
 #include "function_pointers.h"
 
 /**
- * print_name_as_is - prints a name as is
+ * print_name_as_is - ENTRY the code that prints a name a
  * @name: name of the person
  *
  * Return: Nothing.
