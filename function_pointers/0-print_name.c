@@ -5,6 +5,7 @@
  * print_name - Print a name from a function pointer
  * @name: char string.
  * @f: function pointer that takes a string argument
+ * Fonction qui utilise fonction
  */
 
 void print_name(char *name, void (*f)(char *))
