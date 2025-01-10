@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * list_len - Retourne le nombre d'éléments dans une liste chaînée de type list_t
+ * list_len - Retourne le nombre d'éléments dans une liste chaînée de type list_t list.
  * @h: Pointeur vers le premier élément de la liste chaînée
  *
  * Description: Cette fonction parcourt une liste chaînée de type `list_t`
