@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * main - check the code
+ * main - Entry the code that prints all elements of a dlistint_t list.
  *
  * Return: Always EXIT_SUCCESS.
  */
