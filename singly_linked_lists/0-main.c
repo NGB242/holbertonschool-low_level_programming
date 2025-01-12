@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * main - check the code
+ * main - ENTRY the code that prints all the elements of a list_t list.
  *
  * Return: Always 0.
  */
@@ -20,7 +20,7 @@ new = malloc(sizeof(list_t));
 if (new == NULL)
 {
 printf("Error\n");
-    return (1);
+return (1);
 }
 new->str = strdup("Hello");
 new->len = 5;
