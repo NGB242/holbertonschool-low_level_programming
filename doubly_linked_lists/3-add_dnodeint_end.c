@@ -1,34 +1,37 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "lists.h"
+#include <stdlib.h>
+
 /**
- * add_dnodeint_end - Ajoute un nouveau noeud à la fin de la liste
- * @head: Le pointeur du dernier noeud de la liste
- * @n: L'entier à dupliquer dans le nouveau noeud
- * Return: La nouvelle liste, ou NULL si cela échoue.
+ * add_dnodeint_end - ajoute 1 nœud à la fin d'une liste double chaînée
+ * @head: pointeur vers le premier nœud de la liste
+ * @n: valeur à ajouter au nouveau nœud
+ *
+ * Return: l'adresse du nouveau nœud, ou NULL si l'échec
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-dlistint_t *findeliste;
-dlistint_t *temporaire;
-findeliste = malloc(sizeof(dlistint_t));
-if (findeliste == NULL)
-return (NULL);
-findeliste->n = n;
-findeliste->next = NULL;
-if (*head == NULL)
-{
-findeliste->prev = NULL;
-*head = findeliste;
-return (findeliste);
-}
-temporaire = *head;
-while (temporaire->next != NULL)
-{
-temporaire = temporaire->next;
-}
-temporaire->next = findeliste;
-findeliste->prev = temporaire;
-return (findeliste);
+	dlistint_t *new, *temp;
+
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = NULL;
+
+	if (*head == NULL)
+	{
+		new->prev = NULL;
+		*head = new;
+	}
+	else
+	{
+		temp = *head;
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
+		new->prev = temp;
+	}
+
+	return (new);
 }
