@@ -1,23 +1,30 @@
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "lists.h"
+
 /**
- * get_dnodeint_at_index - Returns the nth node of a doubly linked list
- * @head: Pointer to the head of the doubly linked list
- * @compteur: Index of the node, starting from 0
+ * get_dnodeint_at_index - retourne le nième nœud d'1 liste chaînée.
+ * @head: pointeur vers le début de la liste.
+ * @index: index du nœud à récupérer, en commençant de 0.
  *
- * Return: Pointer to the nth node, or NULL if the index does not exist
+ * Return: pointeur vers le nœud à l'index donné, ou NULL s'il n'existe pas.
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-unsigned int compteur = 0;
-while (head)
-{
-if (compteur == index)
-return (head);
-head = head->next;
-compteur++;
-}
-return (NULL);
+	unsigned int i;
+
+	if (head == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; head != NULL; i++)
+	{
+		if (i == index)
+		{
+			return (head);
+		}
+		head = head->next;
+	}
+
+	return (NULL);
 }
