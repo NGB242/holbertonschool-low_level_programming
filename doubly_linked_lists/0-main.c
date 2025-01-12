@@ -1,34 +1,32 @@
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * main - Entry the code that prints all elements of a dlistint_t list.
+ * main - Point d'entrée pour tester la fonction print_dlistint
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: Toujours 0 (succès)
  */
 int main(void)
 {
-dlistint_t *head;
-dlistint_t *new;
-dlistint_t hello = {8, NULL, NULL};
-size_t n;
+	dlistint_t *head;
+	dlistint_t *new;
+	dlistint_t node1 = {8, NULL, NULL};
+	dlistint_t node2 = {42, NULL, NULL};
 
-head = &hello;
-new = malloc(sizeof(dlistint_t));
-if (new == NULL)
-{
-dprintf(2, "Error: Can't malloc\n");
-return (EXIT_FAILURE);
-}
-new->n = 9;
-head->prev = new;
-new->next = head;
-new->prev = NULL;
-head = new;
-n = print_dlistint(head);
-printf("-> %lu elements\n", n);
-free(new);
-return (EXIT_SUCCESS);
+	head = &node1;
+	node1.next = &node2;
+
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (1);
+	new->n = 98;
+	new->prev = NULL;
+	new->next = head;
+	head->prev = new;
+	head = new;
+
+	print_dlistint(head);
+
+	free(new);
+	return (0);
 }

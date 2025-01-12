@@ -1,23 +1,20 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
+
 /**
- * print_dlistint - Affiche touts les éléments d'une liste chaînée double
- * @h: Pointeur vers le premier nœud de la liste
- * Return: Le nombre total de nœuds.
-*/
+ * print_dlistint - Affiche tous les éléments d'une liste dlistint_t
+ * @h: Pointeur vers la tête de la liste
+ *
+ * Return: Le nombre de nœuds dans la liste
+ */
 size_t print_dlistint(const dlistint_t *h)
 {
-size_t compteur = 0;
-if (h == NULL)
-{
-return (0);
-}
-while (h != NULL)
-{
-printf("%u\n", h->n);
-h = h->next;
-++compteur;
-}
-return (compteur);
+	size_t count = 0;
+
+	while (h != NULL)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+		count++;
+	}
+	return (count);
 }
