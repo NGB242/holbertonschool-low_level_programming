@@ -16,3 +16,4 @@ t = _strstr(s, f);
 printf("%s\n", t);
 return (0);
 }
+
