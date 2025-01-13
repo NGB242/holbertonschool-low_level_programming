@@ -1,17 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
-*main - Affiche les resultats
-*Description:
-*Return:Always 0 (success)
-*/
-	int main(void)
+ * main - Entry point
+ *
+ * Description: Prints the lowercase alphabet in reverse,
+ * followed by a new line.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-	char low;
-	for (low = 'z'; low >= 'a'; low--)
-	putchar(low);
+	int i;
+
+	for (i = 122; i >= 97; i--)  /* 'z' = 122, 'a' = 97 */
+		putchar(i);
 	putchar('\n');
 	return (0);
 }
