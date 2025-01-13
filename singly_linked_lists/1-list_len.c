@@ -1,22 +1,20 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
+
 /**
- * list_len - Retourne le nombre d'éléments dans une liste chaînée de type list_t list.
- * @h: Pointeur vers le premier élément de la liste chaînée
+ * list_len - retourne le nombre d'éléments dans une liste chaînée
+ * @h: pointeur vers le premier élément de la liste
  *
- * Description: Cette fonction parcourt une liste chaînée de type `list_t`
- * et compte le nombre de nœuds présents dans la liste.
- *
- * Return: Le nombre total de nœuds dans la liste chaînée.
+ * Return: le nombre d'éléments dans la liste
  */
 size_t list_len(const list_t *h)
 {
-size_t compteur = 0;
- while (h != NULL)
+	size_t count = 0;
+
+	while (h != NULL)
 	{
-		++compteur;
+		count++;
 		h = h->next;
 	}
-	return (compteur);
+
+	return (count);
 }
